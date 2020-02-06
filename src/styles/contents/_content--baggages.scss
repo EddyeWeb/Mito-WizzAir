@@ -1,0 +1,13 @@
+// Baggages
+
+.baggages {
+  @include flex-equal;
+
+  &__item {
+    width: 33%;
+    text-align: center;
+    border: 1px solid #e1e1e1;
+    border-radius: $border-radius;
+    padding: $rem30 $rem20;
+  }
+}

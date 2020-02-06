@@ -2,6 +2,7 @@
 
 h1 {
   @include heading-main;
+  margin: $rem20 0 $rem15;
 }
 
 h2 {
@@ -10,4 +11,8 @@ h2 {
 
 .line-label {
   @include typo-line-label;
+}
+
+b {
+  font-weight: 700;
 }

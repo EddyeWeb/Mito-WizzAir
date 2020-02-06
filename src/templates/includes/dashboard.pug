@@ -1,4 +1,45 @@
 main
   .container
+
     h1 Passengers and baggages
+
     .dashboard
+      .dashboard__row
+        .passenger-icon
+          img(src="images/icons/icon--male.svg")
+          
+          form.form
+            .form-row
+              input(type="text", placeholder="First name")
+              input(type="text", placeholder="Last name")
+      
+      .dashboard__row
+        .checker
+          li
+            input.checkbox#check1(type="checkbox")
+            label(for="check1") Lorem Ipsum
+        
+        h3 Checked-in baggages
+        
+        .baggages
+          .baggages__item
+            img(src="images/icons/icon--baggage-10kg.svg")
+            p
+              b 10 kg
+            p.price Ft 20,600
+          .baggages__item.popular
+            img(src="images/icons/icon--baggage-20kg.svg")
+            p
+              b 20 kg
+            p.price Ft 48,900
+          .baggages__item
+            img(src="images/icons/icon--baggage-32kg.svg")
+            p
+              b 32 kg
+            p.price Ft 61,200
+      
+      .dashboard__row
+        h3 Cabin baggage
+      
+      .dashboard__row
+        button.btn Next

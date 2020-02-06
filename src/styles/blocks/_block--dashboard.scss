@@ -1,0 +1,14 @@
+.dashboard {
+  background-color: $color-white;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  padding: $rem50;
+
+  &__row {
+    border-bottom: 1px solid $color-shade
+  }
+
+  h3 {
+    @include heading-label;
+  }
+}

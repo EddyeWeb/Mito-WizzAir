@@ -1,8 +1,48 @@
-aside {
+.sidebar {
   box-shadow: $box-shadow;
 
   @include md {
     display: none;
+  }
+
+  &__content {
+    padding: $rem15 $rem20;
+    border-bottom: 1px dashed #c1c1c1;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 47%;
+      bottom: -11px;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #c1c1c1;
+      clear: both;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 47%;
+      bottom: -9px;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid $bg-color-base;
+      clear: both;
+    }
+
+    &.opened {
+      background-color: $color-white;
+
+      &:after {
+        border-top: 10px solid $color-white;
+      }
+    }
   }
 
   h2 {

@@ -1,5 +1,5 @@
 header {
-  @include flex-right-center
+  @include flex-right-center;
   width: 100%;
   background-color: $color-blue;
   padding: 0 3.75em;
@@ -8,30 +8,34 @@ header {
       background-color: red;
   }
 
-  .container {
-    @include flex-right-center
-  }
-
   .main-nav {
-    @include flex-right-center
+    @include flex-right-center;
+    width: 100%;
 
     ul {
-      @include flex-right-center
-    }
+      @include flex-right-center;
 
-    li {
-      &:last-child {
-        a {
-          border: 0;
+      li {
+        &:last-child {
+          a {
+            border: 0;
+          }
         }
       }
     }
+  }
 
-    a {
-      @include typo-nav-item;
-      padding: $rem24 $rem20 $rem24 0;
-      margin-right: $rem20;
-      border-right: 2px solid #201DBC;
+  a {
+    @include typo-nav-item;
+    padding: $rem10 $rem20 $rem10 0;
+    margin-right: $rem20;
+    border-right: 2px solid #201DBC;
+
+    &.dropdown {
+      &:after {
+        content: url(../images/icons/icon--caret.svg);
+        display: inline-block;
+      }
     }
   }
 }

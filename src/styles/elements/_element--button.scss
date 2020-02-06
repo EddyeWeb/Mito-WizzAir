@@ -1,0 +1,14 @@
+// Buttons
+
+.btn {
+  background: $color-pink;
+  border-radius: $border-radius;
+  color: $color-white;
+  text-transform: uppercase;
+  border: 0;
+  font-size: 16px;
+  line-height: 19px;
+  padding: $rem15;
+  width: 180px;
+  cursor: pointer;
+}

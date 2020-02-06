@@ -9,62 +9,59 @@
   </head>
   <body>
     <header>
-      <div class="container">
-        <nav class="main-nav">
-          <ul>
-            <li><a class="dropdown" href="/">Plan</a></li>
-            <li><a class="dropdown" href="/">Information</a></li>
-            <li><a href="/">Check-in & Bookings</a></li>
-            <li><a href="/">Sign In</a></li>
-            <li><a class="dropdown" href="/">English (GBP)</a></li>
-          </ul>
-        </nav>
-      </div>
+      <nav class="main-nav">
+        <ul>
+          <li><a class="dropdown" href="/">Plan</a></li>
+          <li><a class="dropdown" href="/">Information</a></li>
+          <li><a href="/">Check-in & Bookings</a></li>
+          <li><a href="/">Sign In</a></li>
+          <li><a class="dropdown" href="/">English (GBP)</a></li>
+        </ul>
+      </nav>
     </header>
     <aside class="sidebar">
-      <div class="container">
-        <div class="sidebar__header">
-          <div class="sidebar__header--logo"><img src="images/wizz_logo.svg"></div>
-          <div class="sidebar__header--info">
-            <p class="line-label">BUDAPEST ― london luton 1 passenger</p>
+      <div class="sidebar__header">
+        <div class="sidebar__header--logo"><img src="images/wizz_logo.svg"></div>
+        <div class="sidebar__header--info">
+          <p class="line-label">BUDAPEST ― london luton 1 passenger</p>
+        </div>
+      </div>
+      <div class="sidebar__content">
+        <h2>Flights</h2>
+        <p class="price">Ft41,980</p>
+        <ul class="flight-list">
+          <li><span class="calendar">JAN<b>27</b></span><a class="title" href="javascript:void(0);">Budapest – London Luton</a><span class="interval">Wed 06:00 – 07:35 (W6 2201)</span><span class="info"> <b>Basic fare, </b>1 × Flight ticket, 1 × Administration fee</span></li>
+          <li><span class="calendar">JAN<b>31</b></span><a class="title" href="javascript:void(0);">Budapest – London Luton</a><span class="interval">Wed 06:00 – 07:35 (W6 2201)</span><span class="info"> <b>Basic fare, </b>1 × Flight ticket, 1 × Administration fee</span></li>
+        </ul>
+      </div>
+      <div class="sidebar__content opened">
+        <h2>Passengers</h2>
+        <ul class="passenger-list">
+          <li>
+            <div class="passenger-icon"><img src="images/icons/icon--male.svg"></div>
+            <p>Adult 1</p>
+            <p class="message">Please fill out passengers details</p>
+          </li>
+        </ul>
+      </div>
+      <div class="sidebar__content">
+        <h2>Seats</h2>
+      </div>
+      <div class="sidebar__content">
+        <h2>Services</h2>
+      </div>
+      <div class="sidebar__content">
+        <h2>Payment</h2>
+        <div class="total line">
+          <div class="line__left">
+            <p><b>TOTAL in</b></p>
+            <select>
+              <option>HUF</option>
+              <option>GBP</option>
+            </select>
           </div>
-        </div>
-        <div class="sidebar__content">
-          <h2>Flights</h2>
-          <p class="price">Ft41,980</p>
-          <ul class="flight-list">
-            <li><span class="calendar">JAN<b>27</b></span><a class="title" href="javascript:void(0);">Budapest – London Luton</a><span class="interval">Wed 06:00 – 07:35 (W6 2201)</span><span class="info"> <b>Basic fare, </b>1 × Flight ticket, 1 × Administration fee</span></li>
-            <li><span class="calendar">JAN<b>31</b></span><a class="title" href="javascript:void(0);">Budapest – London Luton</a><span class="interval">Wed 06:00 – 07:35 (W6 2201)</span><span class="info"> <b>Basic fare, </b>1 × Flight ticket, 1 × Administration fee</span></li>
-          </ul>
-        </div>
-        <div class="sidebar__content">
-          <h2>Passengers</h2>
-          <ul class="passenger-list">
-            <li><img src="images/icons/icon--male.svg">
-              <p>Adult 1</p>
-              <p class="message">Please fill out passengers details</p>
-            </li>
-          </ul>
-        </div>
-        <div class="sidebar__content">
-          <h2>Seats</h2>
-        </div>
-        <div class="sidebar__content">
-          <h2>Services</h2>
-        </div>
-        <div class="sidebar__content">
-          <h2>Payment</h2>
-          <div class="total line">
-            <div class="line__left">
-              <p><b>TOTAL in</b></p>
-              <select>
-                <option>HUF</option>
-                <option>GBP</option>
-              </select>
-            </div>
-            <div class="line__right">
-              <p>Ft41,980</p>
-            </div>
+          <div class="line__right">
+            <p>Ft41,980</p>
           </div>
         </div>
       </div>
@@ -72,7 +69,47 @@
     <main>
       <div class="container">
         <h1>Passengers and baggages</h1>
-        <div class="dashboard"></div>
+        <div class="dashboard">
+          <div class="dashboard__row">
+            <div class="passenger-icon"><img src="images/icons/icon--male.svg">
+              <form class="form">
+                <div class="form-row">
+                  <input type="text" placeholder="First name">
+                  <input type="text" placeholder="Last name">
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="dashboard__row">
+            <div class="checker">
+              <li>
+                <input class="checkbox" id="check1" type="checkbox">
+                <label for="check1">Lorem Ipsum</label>
+              </li>
+            </div>
+            <h3>Checked-in baggages</h3>
+            <div class="baggages">
+              <div class="baggages__item"><img src="images/icons/icon--baggage-10kg.svg">
+                <p><b>10 kg</b></p>
+                <p class="price">Ft 20,600</p>
+              </div>
+              <div class="baggages__item popular"><img src="images/icons/icon--baggage-20kg.svg">
+                <p><b>20 kg</b></p>
+                <p class="price">Ft 48,900</p>
+              </div>
+              <div class="baggages__item"><img src="images/icons/icon--baggage-32kg.svg">
+                <p><b>32 kg</b></p>
+                <p class="price">Ft 61,200</p>
+              </div>
+            </div>
+          </div>
+          <div class="dashboard__row">
+            <h3>Cabin baggage</h3>
+          </div>
+          <div class="dashboard__row">
+            <button class="btn">Next</button>
+          </div>
+        </div>
       </div>
     </main>
   </body>

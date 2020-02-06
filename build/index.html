@@ -27,8 +27,10 @@
         </div>
       </div>
       <div class="sidebar__content">
-        <h2>Flights</h2>
-        <p class="price">Ft41,980</p>
+        <div class="sidebar__content--line">
+          <h2 class="check">Flights</h2>
+          <p class="price">Ft41,980</p>
+        </div>
         <ul class="flight-list">
           <li><span class="calendar">JAN<b>27</b></span><a class="title" href="javascript:void(0);">Budapest – London Luton</a><span class="interval">Wed 06:00 – 07:35 (W6 2201)</span><span class="info"> <b>Basic fare, </b>1 × Flight ticket, 1 × Administration fee</span></li>
           <li><span class="calendar">JAN<b>31</b></span><a class="title" href="javascript:void(0);">Budapest – London Luton</a><span class="interval">Wed 06:00 – 07:35 (W6 2201)</span><span class="info"> <b>Basic fare, </b>1 × Flight ticket, 1 × Administration fee</span></li>
@@ -52,17 +54,17 @@
       </div>
       <div class="sidebar__content">
         <h2>Payment</h2>
-        <div class="total line">
-          <div class="line__left">
-            <p><b>TOTAL in</b></p>
-            <select>
-              <option>HUF</option>
-              <option>GBP</option>
-            </select>
-          </div>
-          <div class="line__right">
-            <p>Ft41,980</p>
-          </div>
+      </div>
+      <div class="total">
+        <div class="total__left">
+          <p><b>TOTAL in</b></p>
+          <select>
+            <option>HUF</option>
+            <option>GBP</option>
+          </select>
+        </div>
+        <div class="total__right">
+          <p>Ft41,980</p>
         </div>
       </div>
     </aside>
@@ -71,23 +73,22 @@
         <h1>Passengers and baggages</h1>
         <div class="dashboard">
           <div class="dashboard__row">
-            <div class="passenger-icon"><img src="images/icons/icon--male.svg">
-              <form class="form">
-                <div class="form-row">
-                  <input type="text" placeholder="First name">
-                  <input type="text" placeholder="Last name">
-                </div>
-              </form>
-            </div>
+            <div class="passenger-icon"><img src="images/icons/icon--male.svg"></div>
+            <form class="form">
+              <div class="form__row">
+                <input class="form__row--text" type="text" placeholder="First name">
+                <input class="form__row--text" type="text" placeholder="Last name">
+              </div>
+            </form><a class="link" href="javascript:void(0);">Special assistance?</a><span class="helper">Fill out your name and activate your Privilege Pass!</span>
           </div>
           <div class="dashboard__row">
             <div class="checker">
               <li>
                 <input class="checkbox" id="check1" type="checkbox">
-                <label for="check1">Lorem Ipsum</label>
+                <label for="check1">I select the same for both ways</label>
               </li>
             </div>
-            <h3>Checked-in baggages</h3>
+            <h3>Checked-in baggages</h3><a class="info" href="javascript:void(0);">INFO</a>
             <div class="baggages">
               <div class="baggages__item"><img src="images/icons/icon--baggage-10kg.svg">
                 <p><b>10 kg</b></p>
@@ -102,6 +103,16 @@
                 <p class="price">Ft 61,200</p>
               </div>
             </div>
+            <div class="checker">
+              <li>
+                <input class="checkbox" id="check2" type="checkbox">
+                <label for="check2">I don't want to carry a checked-in bag</label>
+              </li>
+            </div>
+            <select class="select">
+              <option>Travel with sport equipment</option>
+              <option>Travel without sport equipment</option>
+            </select>
           </div>
           <div class="dashboard__row">
             <h3>Cabin baggage</h3>

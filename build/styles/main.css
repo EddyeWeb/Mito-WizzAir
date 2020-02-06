@@ -57,7 +57,7 @@ h1 {
   line-height: 48px;
   text-transform: uppercase;
   color: #06038d;
-  margin: 1.25em 0 0.938em; }
+  margin: 1.25em 1.25em 0.938em; }
 
 h2 {
   font-style: normal;
@@ -88,7 +88,7 @@ body {
   grid-template-areas: "aside header" "aside main";
   font-family: "Source Sans Pro", sans-serif;
   background-color: #e5e5e5; }
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     body {
       grid-template-areas: "header header" "main main"; } }
 
@@ -128,13 +128,21 @@ li {
 
 .sidebar {
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1); }
-  @media (max-width: 768px) {
+  @media (max-width: 992px) {
     .sidebar {
       display: none; } }
+  .sidebar__header {
+    text-align: center;
+    padding: 1.25em 2.5em;
+    border-bottom: 1px solid #c1c1c1; }
   .sidebar__content {
     padding: 0.938em 1.25em;
     border-bottom: 1px dashed #c1c1c1;
     position: relative; }
+    .sidebar__content:nth-child(6) {
+      border: 0; }
+      .sidebar__content:nth-child(6):before, .sidebar__content:nth-child(6):after {
+        display: none; }
     .sidebar__content:before {
       content: '';
       position: absolute;
@@ -161,6 +169,16 @@ li {
       background-color: #fff; }
       .sidebar__content.opened:after {
         border-top: 10px solid #fff; }
+    .sidebar__content--line {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.938em; }
+    .sidebar__content .price {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: #06038d; }
   .sidebar h2 {
     font-style: normal;
     font-weight: bold;
@@ -168,12 +186,19 @@ li {
     line-height: 20px;
     text-transform: uppercase;
     color: #343434; }
+    .sidebar h2.check:before {
+      content: url(../images/icons/icon--check.svg); }
+  .sidebar .total {
+    background-color: #06038d;
+    color: #fff;
+    padding: 0.938em 1.25em; }
 
 .dashboard {
   background-color: #fff;
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-  padding: 3.125em; }
+  padding: 3.125em;
+  margin: 3.125em; }
   .dashboard__row {
     border-bottom: 1px solid #f2f2f2; }
   .dashboard h3 {
@@ -228,7 +253,10 @@ header {
     text-align: center;
     border: 1px solid #e1e1e1;
     border-radius: 3px;
-    padding: 1.875em 1.25em; }
+    padding: 1.875em 1.25em;
+    cursor: pointer; }
+    .baggages__item:hover {
+      border: 2px solid #06038D; }
 
 .btn {
   background: #c6007e;
@@ -242,6 +270,26 @@ header {
   width: 180px;
   cursor: pointer; }
 
+.sidebar .calendar {
+  display: inline-block;
+  border: 2px solid #e1e1e1;
+  border-radius: 3px;
+  background-color: #f2f2f2;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #343434;
+  margin-right: 12px; }
+  .sidebar .calendar b {
+    display: block;
+    font-size: 18px;
+    font-weight: 700;
+    background: #fff;
+    padding: 2px 11px; }
+
 .checkbox {
   position: absolute;
   opacity: 0; }
@@ -250,7 +298,8 @@ header {
     cursor: pointer;
     padding: 0;
     font-weight: bold;
-    font-size: 14px; }
+    font-size: 14px;
+    transition: all 0.3s ease; }
   .checkbox + label:before {
     content: '';
     margin-right: 10px;
@@ -260,22 +309,38 @@ header {
     height: 22px;
     background: white;
     border-radius: 3px;
-    border: 2px solid #999999; }
+    border: 2px solid #999999;
+    transition: all 0.3s ease; }
   .checkbox:hover + label:before {
     background: #c6007e;
-    border: 0; }
+    border: 0;
+    transition: all 0.3s ease; }
   .checkbox:checked + label:before {
     background: #c6007e;
-    border: 0; }
+    border: 0;
+    transition: all 0.3s ease; }
   .checkbox:checked + label:after {
     content: url(../images/icons/icon--pipe.svg);
     zoom: 0.9;
     position: absolute;
     left: 3px;
-    top: 3px; }
+    top: 3px;
+    transition: all 0.3s ease; }
 
-input[type=text] {
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 16px;
-  padding: 1.5em 0 1.5em 1em;
-  border: 1px solid #999; }
+.form {
+  display: block;
+  width: 100%; }
+  .form__row {
+    display: flex;
+    align-items: flex-start;
+    border: 1px solid #999;
+    border-radius: 3px; }
+    .form__row--text {
+      margin: 0;
+      font-family: "Source Sans Pro", sans-serif;
+      font-size: 16px;
+      padding: 1.5em 0 1.5em 1em;
+      border: 0; }
+      .form__row--text:last-child {
+        margin-left: -1px;
+        border-left: 1px solid #999; }

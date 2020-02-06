@@ -8,18 +8,22 @@ main
         .passenger-icon
           img(src="images/icons/icon--male.svg")
           
-          form.form
-            .form-row
-              input(type="text", placeholder="First name")
-              input(type="text", placeholder="Last name")
-      
+        form.form
+          .form__row
+            input.form__row--text(type="text", placeholder="First name")
+            input.form__row--text(type="text", placeholder="Last name")
+        
+        a.link(href="javascript:void(0);") Special assistance?
+        span.helper Fill out your name and activate your Privilege Pass!
+
       .dashboard__row
         .checker
           li
             input.checkbox#check1(type="checkbox")
-            label(for="check1") Lorem Ipsum
+            label(for="check1") I select the same for both ways
         
         h3 Checked-in baggages
+        a.info(href="javascript:void(0);") INFO
         
         .baggages
           .baggages__item
@@ -37,6 +41,15 @@ main
             p
               b 32 kg
             p.price Ft 61,200
+        
+        .checker
+          li
+            input.checkbox#check2(type="checkbox")
+            label(for="check2") I don't want to carry a checked-in bag
+        
+        select.select
+          option Travel with sport equipment
+          option Travel without sport equipment
       
       .dashboard__row
         h3 Cabin baggage

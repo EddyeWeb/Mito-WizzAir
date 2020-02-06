@@ -6,8 +6,9 @@ aside.sidebar
       p.line-label BUDAPEST ― london luton 1 passenger
 
   .sidebar__content
-    h2 Flights
-    p.price Ft41,980
+    .sidebar__content--line
+      h2.check Flights
+      p.price Ft41,980
     ul.flight-list
       li
         span.calendar
@@ -47,12 +48,13 @@ aside.sidebar
   
   .sidebar__content
     h2 Payment
-    .total.line
-      .line__left
-        p
-          b TOTAL in
-        select
-          option HUF
-          option GBP
-      .line__right
-        p Ft41,980
+
+  .total
+    .total__left
+      p
+        b TOTAL in
+      select
+        option HUF
+        option GBP
+    .total__right
+      p Ft41,980

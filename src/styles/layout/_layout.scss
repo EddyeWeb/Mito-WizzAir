@@ -11,7 +11,7 @@ body {
   font-family: $main-font;
   background-color: $bg-color-base;
 
-  @include md {
+  @include lg {
     grid-template-areas:
         "header header"
         "main main";

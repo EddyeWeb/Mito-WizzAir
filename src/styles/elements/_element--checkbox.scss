@@ -10,6 +10,7 @@
     padding: 0;
     font-weight: bold;
     font-size: 14px;
+    transition: all 0.3s ease;
   }
 
   & + label:before {
@@ -22,16 +23,19 @@
     background: white;
     border-radius: $border-radius;
     border: 2px solid #999999;
+    transition: all 0.3s ease;
   }
 
   &:hover + label:before {
     background: $color-pink;
     border: 0;
+    transition: all 0.3s ease;
   }
 
   &:checked + label:before {
     background: $color-pink;
     border: 0;
+    transition: all 0.3s ease;
   }
 
   &:checked + label:after {
@@ -40,5 +44,6 @@
     position: absolute;
     left: 3px;
     top: 3px;
+    transition: all 0.3s ease;
   }
 }

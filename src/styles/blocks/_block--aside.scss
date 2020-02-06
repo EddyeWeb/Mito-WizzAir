@@ -1,14 +1,29 @@
 .sidebar {
   box-shadow: $box-shadow;
 
-  @include md {
+  @include lg {
     display: none;
+  }
+
+  &__header {
+    text-align: center;
+    padding: $rem20 $rem40;
+    border-bottom: 1px solid #c1c1c1;
   }
 
   &__content {
     padding: $rem15 $rem20;
     border-bottom: 1px dashed #c1c1c1;
     position: relative;
+
+    &:nth-child(6) {
+      border: 0;
+
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
 
     &:before {
       content: '';
@@ -43,9 +58,34 @@
         border-top: 10px solid $color-white;
       }
     }
+
+    &--line {
+      @include flex-equal;
+      margin-bottom: $rem15;
+    }
+
+    .price {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: $color-blue;
+    }
   }
 
   h2 {
     @include content-item-label;
+
+    &.check {
+      &:before {
+        content: url(../images/icons/icon--check.svg);
+      }
+    }
+  }
+
+  .total {
+    background-color: $color-blue;
+    color: $color-white;
+    padding: $rem15 $rem20;
   }
 }

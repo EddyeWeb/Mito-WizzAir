@@ -2,8 +2,10 @@
 @import 'node_modules/reset-css/sass/reset.scss';
 
 // Variables
+@import 'variables/variable--breakpoints';
 @import 'variables/variable--colors';
 @import 'variables/variable--effects';
+@import 'variables/variable--sizes';
 @import 'variables/variable--typo';
 
 // Mixins

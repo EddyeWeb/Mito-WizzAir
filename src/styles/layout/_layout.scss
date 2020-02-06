@@ -10,6 +10,12 @@ body {
       "aside main";
   font-family: $main-font;
   background-color: $bg-color-base;
+
+  @include md {
+    grid-template-areas:
+        "header header"
+        "main main";
+  }
 }
 
 header {
@@ -26,4 +32,19 @@ main {
 
 *, *:before, *:after {
   box-sizing: border-box;
+}
+
+// Container responsivity
+
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @include sm {max-width: 540px;}
+  @include md {max-width: 720px;}
+  @include lg {max-width: 960px;}
+  @include xl {max-width: 1140px;}
 }

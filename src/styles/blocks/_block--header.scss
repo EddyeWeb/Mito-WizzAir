@@ -1,12 +1,37 @@
 header {
-  display: block;
+  @include flex-right-center
   width: 100%;
   background-color: $color-blue;
   padding: 0 3.75em;
 
+  @include sm {
+      background-color: red;
+  }
+
+  .container {
+    @include flex-right-center
+  }
+
   .main-nav {
+    @include flex-right-center
+
+    ul {
+      @include flex-right-center
+    }
+
+    li {
+      &:last-child {
+        a {
+          border: 0;
+        }
+      }
+    }
+
     a {
       @include typo-nav-item;
+      padding: $rem24 $rem20 $rem24 0;
+      margin-right: $rem20;
+      border-right: 2px solid #201DBC;
     }
   }
 }

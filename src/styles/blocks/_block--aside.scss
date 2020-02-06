@@ -1,6 +1,10 @@
 aside {
   box-shadow: $box-shadow;
 
+  @include md {
+    display: none;
+  }
+
   h2 {
     @include content-item-label;
   }

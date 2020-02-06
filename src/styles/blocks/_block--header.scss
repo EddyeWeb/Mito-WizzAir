@@ -1,11 +1,13 @@
-header {
+.page-header {
   @include flex-right-center;
   width: 100%;
   background-color: $color-blue;
   padding: 0 3.75em;
+  position: fixed;
+  z-index: 90;
 
-  @include sm {
-      background-color: red;
+  @include lg {
+    position: static;
   }
 
   .main-nav {
@@ -16,9 +18,21 @@ header {
       @include flex-right-center;
 
       li {
+        display: none;
+
+        @include lg {
+          display: block;
+        }
+
         &:last-child {
           a {
             border: 0;
+          }
+        }
+
+        &.lang {
+          &:before {
+            content: url(../images/icons/icon--flag.svg);
           }
         }
       }

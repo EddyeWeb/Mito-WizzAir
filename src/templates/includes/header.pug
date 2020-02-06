@@ -1,13 +1,38 @@
-header
-  nav.main-nav
-    ul
-      li
-        a.dropdown(href="/") Plan
-      li
-        a.dropdown(href="/") Information
-      li
-        a(href="/") Check-in & Bookings
-      li
-        a(href="/") Sign In
-      li
-        a.dropdown(href="/") English (GBP)
+header.page-header
+  .container
+    nav.main-nav
+      ul
+        li
+          a.dropdown(href="/") Plan
+        li
+          a.dropdown(href="/") Information
+        li
+          a(href="/") Check-in & Bookings
+        li
+          a(href="/") Sign In
+        li.lang
+          a.dropdown(href="/") English (GBP)
+          
+    .mobile
+      .hamburger-menu
+        .bar
+    nav.mobile-nav.hide
+      ul.navbar-nav
+        li
+          a.dropdown(href="/") Plan
+        li
+          a.dropdown(href="/") Information
+        li
+          a(href="/") Check-in & Bookings
+        li
+          a(href="/") Sign In
+        li.lang
+          a.dropdown(href="/") English (GBP)
+
+script.
+
+  $('.hamburger-menu').on('click', function() {
+    $('.bar').toggleClass('animate');
+    var mobileNav = $('.mobile-nav');
+    mobileNav.toggleClass('hide show');
+  });

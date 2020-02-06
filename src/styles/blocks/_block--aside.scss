@@ -1,14 +1,31 @@
 .sidebar {
   box-shadow: $box-shadow;
+  display: none;
 
   @include lg {
-    display: none;
+    display: block;
   }
 
   &__header {
     text-align: center;
-    padding: $rem20 $rem40;
+    padding: $rem20;
     border-bottom: 1px solid #c1c1c1;
+
+    &--info {
+      a {
+        display: block;
+        margin-top: $rem16;
+        text-decoration: none;
+        position: relative;
+
+        &:after {
+          content: url(../images/icons/icon--edit.svg);
+          position: absolute;
+          top: 3px;
+          right: $rem40;
+        }
+      }
+    }
   }
 
   &__content {
@@ -65,11 +82,56 @@
     }
 
     .price {
-      font-style: normal;
       font-weight: 700;
       font-size: 16px;
       line-height: 20px;
       color: $color-blue;
+    }
+
+    .flight-list {
+      .title {
+        display: inline-block;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 18px;
+        color: #343434;
+        text-decoration: none;
+
+        &:after {
+          content: '';
+          clear: both;
+        }
+      }
+
+      .interval {
+        display: block;
+        font-size: 12px;
+        line-height: 15px;
+      }
+    }
+
+    .passenger-list {
+      margin: $rem10 0;
+
+      li {
+        display: flex;
+        align-items: center;
+      }
+
+      .passenger-icon {
+        @include flex-full-center;
+        float: left;
+        border: 1px solid #e1e1e1;
+        box-shadow: $box-shadow;
+        border-radius: 100%;
+        width: 56px;
+        height: 56px;
+        margin-right: $rem10;
+      }
+
+      .message {
+        display: block;
+      }
     }
   }
 
@@ -79,6 +141,7 @@
     &.check {
       &:before {
         content: url(../images/icons/icon--check.svg);
+        padding-right: $rem10;
       }
     }
   }

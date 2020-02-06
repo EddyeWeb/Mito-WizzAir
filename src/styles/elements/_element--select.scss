@@ -1,0 +1,44 @@
+// Select
+
+.select {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: $rem40;
+  line-height: 3;
+  background: $color-shade;
+  overflow: hidden;
+  border-radius: $border-radius;
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: $color-shade;
+    background-image: none;
+    border-radius: $border-radius;
+    flex: 1;
+    padding: 0 $rem20;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: $color-pink;
+    cursor: pointer;
+  }
+
+  &:after {
+    content: url(../images/icons/icon--select.svg);
+    position: absolute;
+    top: -3px;
+    right: 0;
+    padding: 0 $rem20;
+    background: $color-shade;
+    cursor: pointer;
+    pointer-events: none;
+  }
+}

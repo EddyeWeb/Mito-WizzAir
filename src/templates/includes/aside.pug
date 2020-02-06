@@ -3,7 +3,10 @@ aside.sidebar
     .sidebar__header--logo
       img(src="images/wizz_logo.svg")
     .sidebar__header--info
-      p.line-label BUDAPEST ― london luton 1 passenger
+      a(href="javascript:void(0);").line-label
+        | BUDAPEST ― london luton
+        br
+        | 1 passenger
 
   .sidebar__content
     .sidebar__content--line
@@ -14,7 +17,10 @@ aside.sidebar
         span.calendar
           | JAN
           b 27
-        a.title(href="javascript:void(0);") Budapest – London Luton
+        a.title(href="javascript:void(0);")
+          | Budapest – 
+          br
+          | London Luton
         span.interval Wed 06:00 – 07:35 (W6 2201)
         span.info
           | 
@@ -24,7 +30,10 @@ aside.sidebar
         span.calendar
           | JAN
           b 31
-        a.title(href="javascript:void(0);") Budapest – London Luton
+        a.title(href="javascript:void(0);")
+          | London Luton -
+          br
+          | Budapest
         span.interval Wed 06:00 – 07:35 (W6 2201)
         span.info
           | 
@@ -37,8 +46,9 @@ aside.sidebar
       li
         .passenger-icon
           img(src="images/icons/icon--male.svg")
-        p Adult 1
-        p.message Please fill out passengers details
+        p 
+          b Adult 1
+    p.message Please fill out passengers details
   
   .sidebar__content
     h2 Seats
@@ -53,8 +63,9 @@ aside.sidebar
     .total__left
       p
         b TOTAL in
+    .select
       select
-        option HUF
+        option(selected='') HUF
         option GBP
     .total__right
       p Ft41,980

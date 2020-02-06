@@ -10,8 +10,12 @@ main
           
         form.form
           .form__row
-            input.form__row--text(type="text", placeholder="First name")
-            input.form__row--text(type="text", placeholder="Last name")
+            .form__row--field
+              input.text(type="text", placeholder="First name")
+              input.text(type="text", placeholder="Last name")
+            .form__row--field
+              input.text(type="text", placeholder="First name")
+              input.text(type="text", placeholder="Last name")
         
         a.link(href="javascript:void(0);") Special assistance?
         span.helper Fill out your name and activate your Privilege Pass!
@@ -26,12 +30,14 @@ main
         a.info(href="javascript:void(0);") INFO
         
         .baggages
-          .baggages__item
+          .baggages__item.selected
             img(src="images/icons/icon--baggage-10kg.svg")
             p
               b 10 kg
             p.price Ft 20,600
           .baggages__item.popular
+            .ribbon
+              span Popular
             img(src="images/icons/icon--baggage-20kg.svg")
             p
               b 20 kg
@@ -47,12 +53,49 @@ main
             input.checkbox#check2(type="checkbox")
             label(for="check2") I don't want to carry a checked-in bag
         
-        select.select
-          option Travel with sport equipment
-          option Travel without sport equipment
+        .select
+          select
+            option(selected='') Travel with sport equipment
+            option Travel without sport equipment
       
       .dashboard__row
         h3 Cabin baggage
+        
+        .cabin
+          .cabin__item
+            .cabin__item--image
+              img(src="images/icons/icon--baggage-20kg.svg")
+            .cabin__item--text
+              p
+                | 2 carry on bags
+                span with WIZZ Priority
+              ul
+                li
+                  p bring both on board
+                li
+                  p  priority boarding included 
+                li
+                  p only 4 left on this flight
+            .cabin__item--button
+              a(href="javascript:void(0);") Add for
+          .cabin__item
+            .cabin__item--image
+              img(src="images/icons/icon--baggage-20kg.svg")
+            .cabin__item--text
+              p 1 carry on bag
+              ul
+                li
+                  p max. 40 × 30 × 20 cm 
+                li
+                  p max. 10 kg
+            .cabin__item--button
+              a(href="javascript:void(0);") Add for
+        
+        .select
+          select
+            option(selected='') Travel with sport equipment
+            option Travel without sport equipment
       
       .dashboard__row
         button.btn Next
+        a.link(href="javascript:void(0);") add same to all passengers

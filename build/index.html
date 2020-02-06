@@ -4,27 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/main.css">
     <title>Mito - WizzAir</title>
   </head>
   <body>
-    <header>
-      <nav class="main-nav">
-        <ul>
-          <li><a class="dropdown" href="/">Plan</a></li>
-          <li><a class="dropdown" href="/">Information</a></li>
-          <li><a href="/">Check-in & Bookings</a></li>
-          <li><a href="/">Sign In</a></li>
-          <li><a class="dropdown" href="/">English (GBP)</a></li>
-        </ul>
-      </nav>
+    <header class="page-header">
+      <div class="container">
+        <nav class="main-nav">
+          <ul>
+            <li><a class="dropdown" href="/">Plan</a></li>
+            <li><a class="dropdown" href="/">Information</a></li>
+            <li><a href="/">Check-in & Bookings</a></li>
+            <li><a href="/">Sign In</a></li>
+            <li class="lang"><a class="dropdown" href="/">English (GBP)</a></li>
+          </ul>
+        </nav>
+        <div class="mobile">
+          <div class="hamburger-menu">
+            <div class="bar"></div>
+          </div>
+        </div>
+        <nav class="mobile-nav hide">
+          <ul class="navbar-nav">
+            <li><a class="dropdown" href="/">Plan</a></li>
+            <li><a class="dropdown" href="/">Information</a></li>
+            <li><a href="/">Check-in & Bookings</a></li>
+            <li><a href="/">Sign In</a></li>
+            <li class="lang"><a class="dropdown" href="/">English (GBP)</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
+    <script>
+      $('.hamburger-menu').on('click', function() {
+        $('.bar').toggleClass('animate');
+        var mobileNav = $('.mobile-nav');
+        mobileNav.toggleClass('hide show');
+      });
+    </script>
     <aside class="sidebar">
       <div class="sidebar__header">
         <div class="sidebar__header--logo"><img src="images/wizz_logo.svg"></div>
-        <div class="sidebar__header--info">
-          <p class="line-label">BUDAPEST ― london luton 1 passenger</p>
-        </div>
+        <div class="sidebar__header--info"><a class="line-label" href="javascript:void(0);">BUDAPEST ― london luton<br>1 passenger</a></div>
       </div>
       <div class="sidebar__content">
         <div class="sidebar__content--line">
@@ -32,8 +54,8 @@
           <p class="price">Ft41,980</p>
         </div>
         <ul class="flight-list">
-          <li><span class="calendar">JAN<b>27</b></span><a class="title" href="javascript:void(0);">Budapest – London Luton</a><span class="interval">Wed 06:00 – 07:35 (W6 2201)</span><span class="info"> <b>Basic fare, </b>1 × Flight ticket, 1 × Administration fee</span></li>
-          <li><span class="calendar">JAN<b>31</b></span><a class="title" href="javascript:void(0);">Budapest – London Luton</a><span class="interval">Wed 06:00 – 07:35 (W6 2201)</span><span class="info"> <b>Basic fare, </b>1 × Flight ticket, 1 × Administration fee</span></li>
+          <li><span class="calendar">JAN<b>27</b></span><a class="title" href="javascript:void(0);">Budapest – <br>London Luton</a><span class="interval">Wed 06:00 – 07:35 (W6 2201)</span><span class="info"> <b>Basic fare, </b>1 × Flight ticket, 1 × Administration fee</span></li>
+          <li><span class="calendar">JAN<b>31</b></span><a class="title" href="javascript:void(0);">London Luton -<br>Budapest</a><span class="interval">Wed 06:00 – 07:35 (W6 2201)</span><span class="info"> <b>Basic fare, </b>1 × Flight ticket, 1 × Administration fee</span></li>
         </ul>
       </div>
       <div class="sidebar__content opened">
@@ -41,10 +63,10 @@
         <ul class="passenger-list">
           <li>
             <div class="passenger-icon"><img src="images/icons/icon--male.svg"></div>
-            <p>Adult 1</p>
-            <p class="message">Please fill out passengers details</p>
+            <p> <b>Adult 1</b></p>
           </li>
         </ul>
+        <p class="message">Please fill out passengers details</p>
       </div>
       <div class="sidebar__content">
         <h2>Seats</h2>
@@ -58,8 +80,10 @@
       <div class="total">
         <div class="total__left">
           <p><b>TOTAL in</b></p>
+        </div>
+        <div class="select">
           <select>
-            <option>HUF</option>
+            <option selected="">HUF</option>
             <option>GBP</option>
           </select>
         </div>
@@ -76,8 +100,14 @@
             <div class="passenger-icon"><img src="images/icons/icon--male.svg"></div>
             <form class="form">
               <div class="form__row">
-                <input class="form__row--text" type="text" placeholder="First name">
-                <input class="form__row--text" type="text" placeholder="Last name">
+                <div class="form__row--field">
+                  <input class="text" type="text" placeholder="First name">
+                  <input class="text" type="text" placeholder="Last name">
+                </div>
+                <div class="form__row--field">
+                  <input class="text" type="text" placeholder="First name">
+                  <input class="text" type="text" placeholder="Last name">
+                </div>
               </div>
             </form><a class="link" href="javascript:void(0);">Special assistance?</a><span class="helper">Fill out your name and activate your Privilege Pass!</span>
           </div>
@@ -90,11 +120,12 @@
             </div>
             <h3>Checked-in baggages</h3><a class="info" href="javascript:void(0);">INFO</a>
             <div class="baggages">
-              <div class="baggages__item"><img src="images/icons/icon--baggage-10kg.svg">
+              <div class="baggages__item selected"><img src="images/icons/icon--baggage-10kg.svg">
                 <p><b>10 kg</b></p>
                 <p class="price">Ft 20,600</p>
               </div>
-              <div class="baggages__item popular"><img src="images/icons/icon--baggage-20kg.svg">
+              <div class="baggages__item popular">
+                <div class="ribbon"><span>Popular</span></div><img src="images/icons/icon--baggage-20kg.svg">
                 <p><b>20 kg</b></p>
                 <p class="price">Ft 48,900</p>
               </div>
@@ -109,16 +140,59 @@
                 <label for="check2">I don't want to carry a checked-in bag</label>
               </li>
             </div>
-            <select class="select">
-              <option>Travel with sport equipment</option>
-              <option>Travel without sport equipment</option>
-            </select>
+            <div class="select">
+              <select>
+                <option selected="">Travel with sport equipment</option>
+                <option>Travel without sport equipment</option>
+              </select>
+            </div>
           </div>
           <div class="dashboard__row">
             <h3>Cabin baggage</h3>
+            <div class="cabin">
+              <div class="cabin__item">
+                <div class="cabin__item--image"><img src="images/icons/icon--baggage-20kg.svg"></div>
+                <div class="cabin__item--text">
+                  <p>2 carry on bags<span>with WIZZ Priority</span></p>
+                  <ul>
+                    <li>
+                      <p>bring both on board</p>
+                    </li>
+                    <li>
+                      <p> priority boarding included </p>
+                    </li>
+                    <li>
+                      <p>only 4 left on this flight</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="cabin__item--button"><a href="javascript:void(0);">Add for</a></div>
+              </div>
+              <div class="cabin__item">
+                <div class="cabin__item--image"><img src="images/icons/icon--baggage-20kg.svg"></div>
+                <div class="cabin__item--text">
+                  <p>1 carry on bag</p>
+                  <ul>
+                    <li>
+                      <p>max. 40 × 30 × 20 cm </p>
+                    </li>
+                    <li>
+                      <p>max. 10 kg</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="cabin__item--button"><a href="javascript:void(0);">Add for</a></div>
+              </div>
+            </div>
+            <div class="select">
+              <select>
+                <option selected="">Travel with sport equipment</option>
+                <option>Travel without sport equipment</option>
+              </select>
+            </div>
           </div>
           <div class="dashboard__row">
-            <button class="btn">Next</button>
+            <button class="btn">Next</button><a class="link" href="javascript:void(0);">add same to all passengers</a>
           </div>
         </div>
       </div>

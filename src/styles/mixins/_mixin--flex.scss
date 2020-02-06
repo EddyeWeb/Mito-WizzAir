@@ -1,5 +1,11 @@
 // Flex mixins
 
+@mixin flex-full-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 @mixin flex-right-center {
   display: flex;
   justify-content: flex-end;

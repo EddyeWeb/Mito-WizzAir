@@ -1,0 +1,58 @@
+aside.sidebar
+  .container
+    .sidebar__header
+      .sidebar__header--logo
+        img(src="images/wizz_logo.svg")
+      .sidebar__header--info
+        p.line-label BUDAPEST ― london luton 1 passenger
+
+    .sidebar__content
+      h2 Flights
+      p.price Ft41,980
+      ul.flight-list
+        li
+          span.calendar
+            | JAN
+            b 27
+          a.title(href="javascript:void(0);") Budapest – London Luton
+          span.interval Wed 06:00 – 07:35 (W6 2201)
+          span.info
+            | 
+            b Basic fare, 
+            | 1 × Flight ticket, 1 × Administration fee
+        li
+          span.calendar
+            | JAN
+            b 31
+          a.title(href="javascript:void(0);") Budapest – London Luton
+          span.interval Wed 06:00 – 07:35 (W6 2201)
+          span.info
+            | 
+            b Basic fare, 
+            | 1 × Flight ticket, 1 × Administration fee
+    
+    .sidebar__content
+      h2 Passengers
+      ul.passenger-list
+        li
+          img(src="images/icons/icon--male.svg")
+          p Adult 1
+          p.message Please fill out passengers details
+    
+    .sidebar__content
+      h2 Seats
+    
+    .sidebar__content
+      h2 Services
+    
+    .sidebar__content
+      h2 Payment
+      .total.line
+        .line__left
+          p
+            b TOTAL in
+          select
+            option HUF
+            option GBP
+        .line__right
+          p Ft41,980

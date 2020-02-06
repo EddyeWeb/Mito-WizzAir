@@ -1,0 +1,13 @@
+// typo
+
+h1 {
+  @include heading-main;
+}
+
+h2 {
+  @include heading-label;
+}
+
+.line-label {
+  @include typo-line-label;
+}

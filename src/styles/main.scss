@@ -1,19 +1,23 @@
-// Mains
-@import 'fonts';
+// Reset
+@import 'node_modules/reset-css/sass/reset.scss';
 
 // Variables
-@import 'variables';
+@import 'variables/variable--colors';
+@import 'variables/variable--effects';
+@import 'variables/variable--typo';
 
-// Contents
-@import 'contents';
-@import 'header';
-@import 'landing';
-@import 'footer';
+// Mixins
+@import 'mixins/mixin--breakpoints';
+@import 'mixins/mixin--flex';
+@import 'mixins/mixin--typo';
 
-// Elements
-@import 'buttons';
+// Styles
+@import 'styles/style--fonts';
+@import 'styles/style--typo';
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: $bg-color;
-}
+// Layout
+@import 'layout/layout';
+
+// Blocks
+@import 'blocks/block--aside';
+@import 'blocks/block--header';

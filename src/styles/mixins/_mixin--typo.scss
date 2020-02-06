@@ -1,0 +1,48 @@
+//= Typo mixins
+
+@mixin heading-main {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 48px;
+  text-transform: uppercase;
+  color: $color-blue;
+}
+
+@mixin heading-label {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 38px;
+  color: $color-blue;
+}
+
+@mixin typo-line-label {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-blue;
+}
+
+@mixin content-item-label {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-grey;
+}
+
+@mixin typo-nav-item {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: right;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $color-white;
+}

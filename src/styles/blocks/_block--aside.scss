@@ -1,0 +1,7 @@
+aside {
+  box-shadow: $box-shadow;
+
+  h2 {
+    @include content-item-label;
+  }
+}

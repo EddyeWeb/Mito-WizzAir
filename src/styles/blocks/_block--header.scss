@@ -1,0 +1,12 @@
+header {
+  display: block;
+  width: 100%;
+  background-color: $color-blue;
+  padding: 0 3.75em;
+
+  .main-nav {
+    a {
+      @include typo-nav-item;
+    }
+  }
+}

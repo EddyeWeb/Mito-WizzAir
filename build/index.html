@@ -112,19 +112,27 @@
         <h1>Passengers and baggages</h1>
         <div class="dashboard">
           <div class="dashboard__row">
-            <div class="passenger-icon"><img src="images/icons/icon--male.svg"></div>
             <form class="form">
+              <div class="passenger-icon"><img src="images/icons/icon--male.svg"></div>
+              <h4>1. passenger (adult)</h4>
               <div class="form__row">
                 <div class="form__row--field">
                   <input class="text" type="text" placeholder="First name">
                   <input class="text" type="text" placeholder="Last name">
                 </div>
                 <div class="form__row--field">
-                  <input class="text" type="text" placeholder="First name">
-                  <input class="text" type="text" placeholder="Last name">
+                  <div class="radio">
+                    <input id="female" type="radio" name="gender" value="female">
+                    <label for="female" value="Female">Female</label>
+                  </div>
+                  <div class="radio">
+                    <input id="male" type="radio" name="gender" value="male" checked="checked">
+                    <label for="male" value="Female">Male</label>
+                  </div>
                 </div>
               </div>
-            </form><a class="link" href="javascript:void(0);">Special assistance?</a><span class="helper">Fill out your name and activate your Privilege Pass!</span>
+            </form>
+            <div class="form__footer"><a class="link" href="javascript:void(0);">Special assistance?</a><span class="helper">Fill out your name and activate your Privilege Pass!</span></div>
           </div>
           <div class="dashboard__row">
             <div class="checker">

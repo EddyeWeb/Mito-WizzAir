@@ -1,0 +1,57 @@
+// Radio inputs
+
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+
+  & + label {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: $color-blue;
+    transition: $transition;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &:after {
+      content: url(../images/icons/icon--check.svg);
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 2px;
+      left: -$rem20;
+      transition: $transition;
+    }
+  }
+
+  &:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+
+  &:checked {
+    & + label:after {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  }
+}
+
+[type="radio"]:checked {
+  & + label {
+    color: $color-pink;
+    transition: $transition;
+    padding-left: $rem10;
+  }
+}

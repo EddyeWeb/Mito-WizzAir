@@ -130,14 +130,9 @@
       }
 
       .passenger-icon {
-        @include flex-full-center;
         float: left;
-        border: 1px solid #e1e1e1;
-        box-shadow: $box-shadow;
-        border-radius: 100%;
-        width: 56px;
-        height: 56px;
         margin-right: $rem10;
+        box-shadow: $box-shadow;
       }
     }
 

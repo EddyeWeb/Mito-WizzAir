@@ -5,20 +5,24 @@ main
 
     .dashboard
       .dashboard__row
-        .passenger-icon
-          img(src="images/icons/icon--male.svg")
-          
         form.form
+          .passenger-icon
+            img(src="images/icons/icon--male.svg")
+          h4 1. passenger (adult)
           .form__row
             .form__row--field
               input.text(type="text", placeholder="First name")
               input.text(type="text", placeholder="Last name")
             .form__row--field
-              input.text(type="text", placeholder="First name")
-              input.text(type="text", placeholder="Last name")
-        
-        a.link(href="javascript:void(0);") Special assistance?
-        span.helper Fill out your name and activate your Privilege Pass!
+              .radio
+                input#female(type='radio' name='gender' value='female')
+                label(for='female' value='Female') Female
+              .radio
+                input#male(type='radio' name='gender' value='male' checked='checked')
+                label(for='male' value='Female') Male
+        .form__footer
+          a.link(href="javascript:void(0);") Special assistance?
+          span.helper Fill out your name and activate your Privilege Pass!
 
       .dashboard__row
         .checker

@@ -2,11 +2,19 @@
 
 h1 {
   @include heading-main;
-  margin: $rem20 0 $rem15;
+  margin: $rem20 0;
 }
 
 h2 {
   @include heading-label;
+}
+
+h3 {
+  @include heading-label;
+}
+
+h4 {
+  @include heading-label-small;
 }
 
 .line-label {

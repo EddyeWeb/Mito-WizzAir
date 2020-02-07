@@ -125,8 +125,7 @@
       margin: $rem10 0;
 
       li {
-        display: flex;
-        align-items: center;
+        @include flex-center;
       }
 
       .passenger-icon {
@@ -180,8 +179,7 @@
     padding: $rem10 $rem20;
 
     &__left {
-      display: flex;
-      align-items: center;
+      @include flex-center;
 
       p {
         margin-right: $rem10;

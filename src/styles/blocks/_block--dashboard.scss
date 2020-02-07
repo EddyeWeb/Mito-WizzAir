@@ -2,8 +2,12 @@
   background-color: $color-white;
   box-shadow: $box-shadow;
   border-radius: $border-radius;
-  padding: 0 $rem50 $rem50;
   margin-bottom: $rem20;
+  padding: 0 $rem20 $rem20;
+
+  @include lg {
+    padding: 0 $rem50 $rem10 / 2;
+  }
 
   &__row {
     border-bottom: 1px solid $color-shade;
@@ -11,9 +15,27 @@
     padding-bottom: $rem20;
 
     &:last-child {
-      @include flex-equal-center;
       border: 0;
       margin-top: $rem20;
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column-reverse;
+
+      @include lg {
+        @include flex-equal-center;
+        flex-direction: row;
+      }
+
+      .link {
+        margin-bottom: $rem20;
+
+        @include lg {
+          margin: 0;
+        }
+      }
     }
 
     .passenger-icon {
@@ -39,7 +61,10 @@
       font-size: 12px;
       line-height: 18px;
       color: $color-grey;
-      margin-left: $rem20;
+
+      @include lg {
+        margin-left: $rem20;
+      }
     }
 
     .link {
@@ -50,10 +75,36 @@
       text-transform: uppercase;
       color: $color-pink;
       transition: $transition;
+      display: block;
+
+      @include lg {
+        display: inline-block;
+      }
 
       &:hover {
         transition: $transition;
         color: #b21479;
+      }
+    }
+  }
+
+  .mobile.text {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+    color: #999;
+    padding: 0;
+
+    p {
+      position: relative;
+      display: block;
+      padding-left: $rem20;
+
+      &:before {
+        content: url(../images/icons/icon--info-mobile.svg);
+        position: absolute;
+        top: 2px;
+        left: 0;
       }
     }
   }

@@ -1,10 +1,8 @@
 .hamburger-menu {
   z-index: 2;
-	position: absolute;
-  top: 5px;
-  left: 20px;
-  width: 25px;
-  height: 30px;
+	position: relative;
+  width: 30px;
+  height: 50px;
 	cursor: pointer;
 
   @include lg {
@@ -72,41 +70,76 @@
 
 .mobile {
   width: 100%;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 60px;
-
-  @include lg {
-    display: none;
-  }
-}
-
-.mobile-nav {
-  top: 0;
-  background-color: $color-blue;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  transition: .2s ease;
   padding: 0 $rem20;
-  display: block;
 
   @include lg {
     display: none;
   }
 
-  ul {
-    position: relative;
-    top: 25%;
-    transform: translateY(-25%);
-    list-style: none;
+  &__logo {
+    filter: brightness(0) invert(1);
+    zoom: 0.75;
   }
 
-  a {
-    color: $color-white;
-    font-size: 16px;
+  .login {
+    font-weight: 500;
+    position: relative;
+    padding: $rem10 $rem30 $rem10 0;
+
+    &:after {
+      content: url(../images/icons/icon--lock.svg);
+      position: absolute;
+      right: 0;
+      top: 3px;
+    }
   }
 }
 
-.mobile-nav.show a {
-  text-align: right;
+.page-header {
+  .mobile-nav {
+    top: 0;
+    background-color: $color-blue;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    transition: .2s ease;
+    padding: 0 $rem20;
+    display: block;
+
+    @include lg {
+      display: none;
+    }
+
+    ul {
+      position: relative;
+      top: 25%;
+      height: 40%;
+      transform: translateY(-25%);
+      list-style: none;
+
+      li {
+        padding: $rem20 0;
+        text-align: left;
+      }
+    }
+
+    a {
+      color: $color-white;
+      font-size: 20px;
+      display: block;
+      width: 100%;
+      text-align: left;
+
+      &.dropdown {
+        &:after {
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+  }
 }

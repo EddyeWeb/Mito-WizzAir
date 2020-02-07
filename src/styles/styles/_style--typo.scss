@@ -2,7 +2,11 @@
 
 h1 {
   @include heading-main;
-  margin: $rem20 0;
+  margin: $rem10 / 1.5 0 $rem20;
+
+  @include lg {
+    margin: $rem20 0;
+  }
 }
 
 h2 {

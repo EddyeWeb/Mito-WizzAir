@@ -5,9 +5,17 @@
   position: fixed;
   z-index: 90;
 
+  .container {
+    display: none;
+  }
+
   @include lg {
     position: static;
     padding: 0 3.75em;
+
+    .container {
+      display: block;
+    }
   }
 
   .main-nav {
@@ -56,9 +64,12 @@
 
   a {
     @include typo-nav-item;
-    padding: $rem10 $rem20 $rem10 0;
-    margin-right: $rem20;
-    border-right: 2px solid #201DBC;
+
+    @include lg {
+      padding: $rem10 $rem20 $rem10 0;
+      margin-right: $rem20;
+      border-right: 2px solid #201DBC;
+    }
 
     &.dropdown {
       position: relative;

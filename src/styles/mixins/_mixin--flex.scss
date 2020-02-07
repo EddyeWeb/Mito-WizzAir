@@ -17,6 +17,11 @@
   align-items: center;
 }
 
+@mixin flex-center-w {
+  display: flex;
+  justify-content: center;
+}
+
 @mixin flex-equal {
   display: flex;
   justify-content: space-between;

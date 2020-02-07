@@ -1,89 +1,119 @@
 // Baggages
 
 .baggages {
-  @include flex-equal;
-  margin-bottom: $rem20;
+  width: 100%;
+  overflow-x: scroll;
+  margin-left: -15px;
+  margin-right: -15px;
 
-  &__item {
-    width: 30%;
-    text-align: center;
-    border: 1px solid #e1e1e1;
-    border-radius: $border-radius;
-    padding: $rem30 $rem20;
-    cursor: pointer;
+  @include lg {
+    overflow: auto;
+    margin: 0;
+  }
 
-    img {
-      margin-bottom: $rem20;
+  &__inner {
+    width: 20em;
+    margin-bottom: $rem20;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
     }
 
-    p {
-      font-weight: 700;
-      font-size: 22px;
-      line-height: 28px;
-      color: $color-grey;
+    @include lg {
+      @include flex-equal;
+      width: 100%;
     }
 
-    .price {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 20px;
-      color: $color-blue;
-    }
+    &--item {
+      display: inline-block;
+      width: 12em;
+      text-align: center;
+      border: 1px solid #e1e1e1;
+      border-radius: $border-radius;
+      padding: $rem30 $rem20;
+      cursor: pointer;
 
-    &.popular {
-      position: relative;
+      @include lg {
+        width: 30%;
+      }
 
-      .ribbon {
-        width: 150px;
-        height: 150px;
-        overflow: hidden;
-        position: absolute;
-        top: -10px;
-        right: -10px;
-        zoom: 0.7;
+      img {
+        margin-bottom: $rem20;
+      }
 
-        &:before,
-        &:after {
+      p {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 28px;
+        color: $color-grey;
+      }
+
+      .price {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-blue;
+      }
+
+      &.popular {
+        position: relative;
+
+        .ribbon {
+          width: 150px;
+          height: 150px;
+          overflow: hidden;
           position: absolute;
-          content: '';
-          display: block;
-          border: 5px solid #2980b9;
-          border-top-color: transparent;
-          border-right-color: transparent;
-        }
+          top: -10px;
+          right: -10px;
+          zoom: 0.7;
 
-        &:before {
-          top: 0;
-          left: 14px;
-        }
+          &:before,
+          &:after {
+            position: absolute;
+            content: '';
+            display: block;
+            border: 5px solid #2980b9;
+            border-top-color: transparent;
+            border-right-color: transparent;
+          }
 
-        &:after {
-          bottom: 14px;
-          right: 0;
-        }
+          &:before {
+            top: 0;
+            left: 14px;
+          }
 
-        span {
-          position: absolute;
-          display: block;
-          width: 225px;
-          padding: $rem10 0 $rem10 1em;
-          background-color: #3498db;
-          box-shadow: 0 5px 10px rgba(0,0,0,.1);
-          color: $color-white;
-          font-weight: 700;
-          text-shadow: 0 1px 1px rgba(0,0,0,.2);
-          text-transform: uppercase;
-          text-align: center;
-          left: -25px;
-          top: 30px;
-          transform: rotate(45deg);
+          &:after {
+            bottom: 14px;
+            right: 0;
+          }
+
+          span {
+            position: absolute;
+            display: block;
+            width: 225px;
+            padding: $rem10 0 $rem10 1em;
+            background-color: #3498db;
+            box-shadow: 0 5px 10px rgba(0,0,0,.1);
+            color: $color-white;
+            font-weight: 700;
+            text-shadow: 0 1px 1px rgba(0,0,0,.2);
+            text-transform: uppercase;
+            text-align: center;
+            left: -25px;
+            top: 30px;
+            transform: rotate(45deg);
+          }
         }
       }
-    }
 
-    &:hover,
-    &.selected {
-      border: 2px solid #06038D;
+      &:hover,
+      &.selected {
+        border: 2px solid #06038D;
+      }
     }
   }
 }

@@ -11,11 +11,14 @@
     flex-wrap: wrap;
 
     &--field {
-      display: flex;
-      justify-content: center;
+      @include flex-center-w;
       border: 1px solid #999;
       border-radius: $border-radius;
-      width: 78%;
+      width: 100%;
+
+      @include lg {
+        width: 78%;
+      }
 
       .radio {
         @include flex-full-center;
@@ -28,8 +31,11 @@
       }
 
       &:last-child {
-        width: 200px;
         border: 2px solid #999;
+
+        @include lg {
+          width: 200px;
+        }
       }
     }
 

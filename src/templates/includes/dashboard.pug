@@ -1,6 +1,7 @@
 main
   .container
 
+    a.mobile.back(href="/") Back
     h1 Passengers and baggages
 
     .dashboard
@@ -13,6 +14,11 @@ main
             .form__row--field
               input.text(type="text", placeholder="First name")
               input.text(type="text", placeholder="Last name")
+            .mobile.text
+              p 
+                | Please add your name as in the Travel document.
+                br
+                | You can only use the letters of the English alphabet.
             .form__row--field
               .radio
                 input#female(type='radio' name='gender' value='female')
@@ -35,23 +41,24 @@ main
             img(src="images/icons/icon--info.svg")
         
         .baggages
-          .baggages__item.selected
-            img(src="images/icons/icon--baggage-10kg.svg")
-            p
-              b 10 kg
-            p.price Ft 20,600
-          .baggages__item.popular
-            .ribbon
-              span Popular
-            img(src="images/icons/icon--baggage-20kg.svg")
-            p
-              b 20 kg
-            p.price Ft 48,900
-          .baggages__item
-            img(src="images/icons/icon--baggage-32kg.svg")
-            p
-              b 32 kg
-            p.price Ft 61,200
+          .baggages__inner
+            .baggages__inner--item.selected
+              img(src="images/icons/icon--baggage-10kg.svg")
+              p
+                b 10 kg
+              p.price Ft 20,600
+            .baggages__inner--item.popular
+              .ribbon
+                span Popular
+              img(src="images/icons/icon--baggage-20kg.svg")
+              p
+                b 20 kg
+              p.price Ft 48,900
+            .baggages__inner--item
+              img(src="images/icons/icon--baggage-32kg.svg")
+              p
+                b 32 kg
+              p.price Ft 61,200
         
         .checker
           li

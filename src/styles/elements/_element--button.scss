@@ -18,3 +18,26 @@
     background-color: #b21479;
   }
 }
+
+.mobile.back {
+  display: block;
+  height: auto;
+  padding: $rem20 0 0;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+  color: $color-pink;
+  padding-left: $rem20;
+  position: relative;
+
+  &:before {
+    content: url(../images/icons/icon--select.svg);
+    display: inline-block;
+    transform: rotate(90deg);
+    position: absolute;
+    left: 0;
+    top: 15px;
+  }
+}

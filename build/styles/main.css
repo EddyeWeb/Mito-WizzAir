@@ -842,7 +842,7 @@ li {
   overflow: hidden; }
   @media (min-width: 576px) {
     .container {
-      max-width: 340px; } }
+      max-width: 100; } }
   @media (min-width: 768px) {
     .container {
       max-width: 720px; } }
@@ -1153,13 +1153,17 @@ li {
       margin: 0; } }
   .baggages__inner {
     width: 20em;
-    margin-bottom: 1.25em;
+    margin: 0 auto 1.25em;
     overflow-x: scroll;
     overflow-y: hidden;
     white-space: nowrap;
     -webkit-overflow-scrolling: touch; }
     .baggages__inner::-webkit-scrollbar {
       display: none; }
+    @media (min-width: 768px) {
+      .baggages__inner {
+        width: 100%;
+        text-align: center; } }
     @media (min-width: 992px) {
       .baggages__inner {
         display: flex;
@@ -1172,10 +1176,12 @@ li {
       border: 1px solid #e1e1e1;
       border-radius: 3px;
       padding: 1.875em 1.25em;
+      margin: 0 0.625em;
       cursor: pointer; }
       @media (min-width: 992px) {
         .baggages__inner--item {
-          width: 30%; } }
+          width: 30%;
+          margin: 0; } }
       .baggages__inner--item img {
         margin-bottom: 1.25em; }
       .baggages__inner--item p {

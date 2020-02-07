@@ -49,7 +49,7 @@ li {
   margin-left: auto;
   overflow: hidden;
 
-  @include sm {max-width: 340px;}
+  @include sm {max-width: 100;}
   @include md {max-width: 720px;}
   @include lg {max-width: 960px;}
   @include xl {max-width: 1140px;}

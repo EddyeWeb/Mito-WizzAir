@@ -7,11 +7,13 @@
 
   &__row {
     border-bottom: 1px solid $color-shade;
+    margin-bottom: $rem20;
+    padding-bottom: $rem20;
 
     &:last-child {
       @include flex-equal-center;
       border: 0;
-      margin-top: $rem60 * 1.5;
+      margin-top: $rem20;
     }
 
     .passenger-icon {
@@ -19,10 +21,25 @@
       top: -$rem10 / 2;
     }
 
+    h3 {
+      margin: $rem20 0;
+
+      a {
+        padding-left: $rem10 / 2;
+      }
+    }
+
     h4 {
       position: relative;
       top: -$rem20;
       left: $rem60 * 1.5;
+    }
+
+    .helper {
+      font-size: 12px;
+      line-height: 18px;
+      color: $color-grey;
+      margin-left: $rem20;
     }
 
     .link {
@@ -32,6 +49,12 @@
       text-decoration-line: underline;
       text-transform: uppercase;
       color: $color-pink;
+      transition: $transition;
+
+      &:hover {
+        transition: $transition;
+        color: #b21479;
+      }
     }
   }
 }

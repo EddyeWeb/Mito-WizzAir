@@ -31,7 +31,8 @@ main
             label(for="check1") I select the same for both ways
         
         h3 Checked-in baggages
-        a.info(href="javascript:void(0);") INFO
+          a.info(href="javascript:void(0);")
+            img(src="images/icons/icon--info.svg")
         
         .baggages
           .baggages__item.selected
@@ -67,33 +68,34 @@ main
         
         .cabin
           .cabin__item
-            .cabin__item--image
-              img(src="images/icons/icon--carry-two.svg")
-            .cabin__item--text
-              p
-                | 2 carry on bags
-                span with WIZZ Priority
-              ul
-                li
-                  p bring both on board
-                li
-                  p  priority boarding included 
-                li
-                  p only 4 left on this flight
+            .cabin__item--content
+              .image
+                img(src="images/icons/icon--carry-two.svg")
+              .text
+                p
+                  | 2 carry on bags 
+                  span with WIZZ Priority
+                ul
+                  li bring both on board
+                  li priority boarding included 
+                  li.last only 4 left on this flight
             .cabin__item--button
-              a(href="javascript:void(0);") Add for
+              a(href="javascript:void(0);")
+                | Add for Ft1,890
+                span /person
+          .separator
+            p or
           .cabin__item
-            .cabin__item--image
-              img(src="images/icons/icon--carry-one.svg")
-            .cabin__item--text
-              p 1 carry on bag
-              ul
-                li
-                  p max. 40 × 30 × 20 cm 
-                li
-                  p max. 10 kg
+            .cabin__item--content
+              .image
+                img(src="images/icons/icon--carry-one.svg")
+              .text
+                p 1 carry on bag
+                ul
+                  li max. 40 × 30 × 20 cm 
+                  li max. 10 kg
             .cabin__item--button
-              a(href="javascript:void(0);") Add for
+              a(href="javascript:void(0);") Add for free
         
         .select
           select

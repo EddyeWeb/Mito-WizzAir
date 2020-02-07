@@ -10,6 +10,7 @@ body {
       "main main";
   font-family: $main-font;
   background-color: $bg-color-base;
+  overflow-x: hidden;
 
   @include lg {
     grid-template-areas:

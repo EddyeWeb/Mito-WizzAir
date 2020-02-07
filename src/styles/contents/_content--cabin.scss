@@ -1,0 +1,129 @@
+// Cabin
+
+.cabin {
+  margin-top: $rem40;
+
+  .separator {
+    width: 100%;
+    text-align: center;
+    padding: 0 0 $rem20;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid #E1E1E1;
+      position: relative;
+      top: -14px;
+      z-index: 5;
+    }
+
+    p {
+      padding: $rem10 / 2 $rem20 * 1.5;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 17px;
+      text-transform: uppercase;
+      color: #343434;
+      background-color: $color-white;
+      display: inline-block;
+      position: relative;
+      z-index: 10;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: $rem20;
+    padding-bottom: $rem20;
+
+    &--content {
+      @include flex-equal-center;
+
+      .image {
+        width: 100px;
+        text-align: center;
+        margin-right: $rem20;
+      }
+
+      .text {
+        p {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 22px;
+          color: $color-grey;
+          margin-bottom: $rem10;
+
+          span {
+            color: #3434e0;
+          }
+        }
+
+        li {
+          position: relative;
+          padding-left: $rem20 / 1.5;
+          margin-top: $rem10;
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 5px;
+            height: 5px;
+            background-color: #b5b5b5;
+            border-radius: 100%;
+          }
+
+          &.last {
+            color: #3434e0;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+    &--button {
+      @include flex-full-center;
+      border: 2px solid #999;
+      border-radius: $border-radius;
+      text-align: center;
+      width: 240px;
+      height: 70px;
+      position: relative;
+
+      a {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 20px;
+        color: $color-blue;
+        text-decoration: none;
+        transition: $transition;
+
+        span {
+          font-weight: 400;
+          display: block;
+        }
+
+        &:hover {
+          color: $color-pink;
+          transition: $transition;
+        }
+      }
+
+      &:after {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 14px;
+        background: #E1E1E1;
+      }
+    }
+  }
+}

@@ -1,49 +1,53 @@
 // Checkbox
 
-.checkbox {
-  position: absolute;
-  opacity: 0;
+.checker {
+  margin-bottom: $rem20;
 
-  & + label {
-    position: relative;
-    cursor: pointer;
-    padding: 0;
-    font-weight: bold;
-    font-size: 14px;
-    transition: $transition;
-  }
-
-  & + label:before {
-    content: '';
-    margin-right: 10px;
-    display: inline-block;
-    vertical-align: text-top;
-    width: 22px;
-    height: 22px;
-    background: white;
-    border-radius: $border-radius;
-    border: 2px solid #999999;
-    transition: $transition;
-  }
-
-  &:hover + label:before {
-    background: $color-pink;
-    border: 0;
-    transition: $transition;
-  }
-
-  &:checked + label:before {
-    background: $color-pink;
-    border: 0;
-    transition: $transition;
-  }
-
-  &:checked + label:after {
-    content: url(../images/icons/icon--pipe.svg);
-    zoom: 0.9;
+  .checkbox {
     position: absolute;
-    left: 3px;
-    top: 3px;
-    transition: $transition;
+    opacity: 0;
+
+    & + label {
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+      font-weight: bold;
+      font-size: 14px;
+      transition: $transition;
+    }
+
+    & + label:before {
+      content: '';
+      margin-right: 10px;
+      display: inline-block;
+      vertical-align: text-top;
+      width: 22px;
+      height: 22px;
+      background: white;
+      border-radius: $border-radius;
+      border: 2px solid #999999;
+      transition: $transition;
+    }
+
+    &:hover + label:before {
+      background: $color-pink;
+      border: 0;
+      transition: $transition;
+    }
+
+    &:checked + label:before {
+      background: $color-pink;
+      border: 0;
+      transition: $transition;
+    }
+
+    &:checked + label:after {
+      content: url(../images/icons/icon--pipe.svg);
+      zoom: 0.9;
+      position: absolute;
+      left: 3px;
+      top: 3px;
+      transition: $transition;
+    }
   }
 }

@@ -21,11 +21,13 @@ aside.sidebar
           | Budapest – 
           br
           | London Luton
-        span.interval Wed 06:00 – 07:35 (W6 2201)
+          span.interval Wed 06:00 – 07:35 (W6 2201)
         span.info
           | 
           b Basic fare, 
-          | 1 × Flight ticket, 1 × Administration fee
+          | 1 × Flight ticket,
+          br
+          | 1 × Administration fee
       li
         span.calendar
           | JAN
@@ -34,11 +36,13 @@ aside.sidebar
           | London Luton -
           br
           | Budapest
-        span.interval Wed 06:00 – 07:35 (W6 2201)
+          span.interval Wed 06:00 – 07:35 (W6 2201)
         span.info
           | 
           b Basic fare, 
-          | 1 × Flight ticket, 1 × Administration fee
+          | 1 × Flight ticket,
+          br
+          | 1 × Administration fee
   
   .sidebar__content.opened
     h2 Passengers
@@ -48,7 +52,10 @@ aside.sidebar
           img(src="images/icons/icon--male.svg")
         p 
           b Adult 1
-    p.message Please fill out passengers details
+    p.message
+      | Please fill out 
+      br
+      | passengers details
   
   .sidebar__content
     h2 Seats
@@ -62,10 +69,12 @@ aside.sidebar
   .total
     .total__left
       p
-        b TOTAL in
-    .select
-      select
-        option(selected='') HUF
-        option GBP
+        b TOTAL 
+        | in
+      .select
+        select
+          option(selected='') HUF
+          option GBP
     .total__right
-      p Ft41,980
+      p
+        b Ft41,980

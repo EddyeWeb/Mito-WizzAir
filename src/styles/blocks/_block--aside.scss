@@ -89,6 +89,10 @@
     }
 
     .flight-list {
+      li {
+        margin-bottom: $rem10;
+      }
+
       .title {
         display: inline-block;
         font-weight: 700;
@@ -101,9 +105,16 @@
           content: '';
           clear: both;
         }
+
+        .interval {
+          display: block;
+          font-size: 12px;
+          line-height: 15px;
+          font-weight: normal;
+        }
       }
 
-      .interval {
+      .info {
         display: block;
         font-size: 12px;
         line-height: 15px;
@@ -128,9 +139,29 @@
         height: 56px;
         margin-right: $rem10;
       }
+    }
 
-      .message {
+    .message {
+      display: block;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: #919191;
+      padding: 0 $rem20;
+      margin-top: $rem10;
+      position: relative;
+
+      &:before {
+        content: '';
         display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 16px;
+        height: 16px;
+        background-color: $color-blue;
+        border-radius: 100%;
+        border: 3px solid #e1e1e1;
       }
     }
   }
@@ -147,8 +178,24 @@
   }
 
   .total {
+    @include flex-equal;
+    align-items: center;
     background-color: $color-blue;
     color: $color-white;
-    padding: $rem15 $rem20;
+    padding: $rem10 $rem20;
+
+    &__left {
+      display: flex;
+      align-items: center;
+
+      p {
+        margin-right: $rem10;
+
+        &:before {
+          content: url(../images/icons/icon--cart.svg);
+          margin-right: $rem10;
+        }
+      }
+    }
   }
 }

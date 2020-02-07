@@ -2,12 +2,12 @@
   @include flex-right-center;
   width: 100%;
   background-color: $color-blue;
-  padding: 0 3.75em;
   position: fixed;
   z-index: 90;
 
   @include lg {
     position: static;
+    padding: 0 3.75em;
   }
 
   .main-nav {

@@ -896,6 +896,8 @@ li {
       font-size: 16px;
       line-height: 20px;
       color: #06038d; }
+    .sidebar__content .flight-list li {
+      margin-bottom: 0.625em; }
     .sidebar__content .flight-list .title {
       display: inline-block;
       font-weight: 700;
@@ -906,7 +908,12 @@ li {
       .sidebar__content .flight-list .title:after {
         content: '';
         clear: both; }
-    .sidebar__content .flight-list .interval {
+      .sidebar__content .flight-list .title .interval {
+        display: block;
+        font-size: 12px;
+        line-height: 15px;
+        font-weight: normal; }
+    .sidebar__content .flight-list .info {
       display: block;
       font-size: 12px;
       line-height: 15px; }
@@ -926,8 +933,26 @@ li {
         width: 56px;
         height: 56px;
         margin-right: 0.625em; }
-      .sidebar__content .passenger-list .message {
-        display: block; }
+    .sidebar__content .message {
+      display: block;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 20px;
+      color: #919191;
+      padding: 0 1.25em;
+      margin-top: 0.625em;
+      position: relative; }
+      .sidebar__content .message:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 16px;
+        height: 16px;
+        background-color: #06038d;
+        border-radius: 100%;
+        border: 3px solid #e1e1e1; }
   .sidebar h2 {
     font-style: normal;
     font-weight: bold;
@@ -939,17 +964,42 @@ li {
       content: url(../images/icons/icon--check.svg);
       padding-right: 0.625em; }
   .sidebar .total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #06038d;
     color: #fff;
-    padding: 0.938em 1.25em; }
+    padding: 0.625em 1.25em; }
+    .sidebar .total__left {
+      display: flex;
+      align-items: center; }
+      .sidebar .total__left p {
+        margin-right: 0.625em; }
+        .sidebar .total__left p:before {
+          content: url(../images/icons/icon--cart.svg);
+          margin-right: 0.625em; }
 
 .dashboard {
   background-color: #fff;
   box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
-  padding: 3.125em; }
+  padding: 3.125em;
+  margin-bottom: 1.25em; }
   .dashboard__row {
     border-bottom: 1px solid #f2f2f2; }
+    .dashboard__row:last-child {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 0;
+      margin-top: 5.625em; }
+    .dashboard__row .link {
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 24px;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+      color: #c6007e; }
   .dashboard h3 {
     font-style: normal;
     font-weight: 300;
@@ -963,12 +1013,12 @@ li {
   align-items: center;
   width: 100%;
   background-color: #06038d;
-  padding: 0 3.75em;
   position: fixed;
   z-index: 90; }
   @media (min-width: 992px) {
     .page-header {
-      position: static; } }
+      position: static;
+      padding: 0 3.75em; } }
   .page-header .main-nav {
     display: flex;
     justify-content: flex-end;
@@ -1063,10 +1113,14 @@ li {
   line-height: 19px;
   padding: 0.938em;
   width: 180px;
-  cursor: pointer; }
+  cursor: pointer;
+  transition: all 0.3s ease; }
+  .btn:hover {
+    transition: all 0.3s ease;
+    background-color: #b21479; }
 
 .sidebar .calendar {
-  display: inline-block;
+  float: left;
   border: 2px solid #e1e1e1;
   border-radius: 3px;
   background-color: #f2f2f2;
@@ -1146,11 +1200,14 @@ li {
 .hamburger-menu {
   z-index: 2;
   position: absolute;
-  top: 20px;
+  top: 5px;
   left: 20px;
   width: 25px;
   height: 30px;
   cursor: pointer; }
+  @media (min-width: 992px) {
+    .hamburger-menu {
+      display: none; } }
   .hamburger-menu .bar,
   .hamburger-menu .bar:after,
   .hamburger-menu .bar:before {
@@ -1196,7 +1253,11 @@ li {
 
 .mobile {
   width: 100%;
-  display: block; }
+  display: block;
+  height: 60px; }
+  @media (min-width: 992px) {
+    .mobile {
+      display: none; } }
 
 .mobile-nav {
   top: 0;
@@ -1259,3 +1320,18 @@ li {
     background: #f2f2f2;
     cursor: pointer;
     pointer-events: none; }
+
+.sidebar .select {
+  background: #3434E0;
+  width: 4.5em; }
+  .sidebar .select select {
+    background: #3434E0;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0 0.625em; }
+  .sidebar .select:after {
+    content: url(../images/icons/icon--select.svg);
+    background: transparent;
+    padding: 0 0.625em;
+    filter: brightness(0) invert(1); }

@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="apple-touch-icon" sizes="57x57" href="public/images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="public/images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="public/images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="public/images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="public/images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="public/images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="public/images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="public/images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="public/images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="public/images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="public/images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon-16x16.png">
+    <link rel="shortcut icon" href="public/images/favicon.ico">
+    <link rel="manifest" href="public/manifest.json">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/main.css">
     <title>Mito - WizzAir</title>
@@ -54,8 +69,8 @@
           <p class="price">Ft41,980</p>
         </div>
         <ul class="flight-list">
-          <li><span class="calendar">JAN<b>27</b></span><a class="title" href="javascript:void(0);">Budapest – <br>London Luton</a><span class="interval">Wed 06:00 – 07:35 (W6 2201)</span><span class="info"> <b>Basic fare, </b>1 × Flight ticket, 1 × Administration fee</span></li>
-          <li><span class="calendar">JAN<b>31</b></span><a class="title" href="javascript:void(0);">London Luton -<br>Budapest</a><span class="interval">Wed 06:00 – 07:35 (W6 2201)</span><span class="info"> <b>Basic fare, </b>1 × Flight ticket, 1 × Administration fee</span></li>
+          <li><span class="calendar">JAN<b>27</b></span><a class="title" href="javascript:void(0);">Budapest – <br>London Luton<span class="interval">Wed 06:00 – 07:35 (W6 2201)</span></a><span class="info"> <b>Basic fare, </b>1 × Flight ticket,<br>1 × Administration fee</span></li>
+          <li><span class="calendar">JAN<b>31</b></span><a class="title" href="javascript:void(0);">London Luton -<br>Budapest<span class="interval">Wed 06:00 – 07:35 (W6 2201)</span></a><span class="info"> <b>Basic fare, </b>1 × Flight ticket,<br>1 × Administration fee</span></li>
         </ul>
       </div>
       <div class="sidebar__content opened">
@@ -66,7 +81,7 @@
             <p> <b>Adult 1</b></p>
           </li>
         </ul>
-        <p class="message">Please fill out passengers details</p>
+        <p class="message">Please fill out <br>passengers details</p>
       </div>
       <div class="sidebar__content">
         <h2>Seats</h2>
@@ -79,16 +94,16 @@
       </div>
       <div class="total">
         <div class="total__left">
-          <p><b>TOTAL in</b></p>
-        </div>
-        <div class="select">
-          <select>
-            <option selected="">HUF</option>
-            <option>GBP</option>
-          </select>
+          <p><b>TOTAL </b>in</p>
+          <div class="select">
+            <select>
+              <option selected="">HUF</option>
+              <option>GBP</option>
+            </select>
+          </div>
         </div>
         <div class="total__right">
-          <p>Ft41,980</p>
+          <p><b>Ft41,980</b></p>
         </div>
       </div>
     </aside>
@@ -151,7 +166,7 @@
             <h3>Cabin baggage</h3>
             <div class="cabin">
               <div class="cabin__item">
-                <div class="cabin__item--image"><img src="images/icons/icon--baggage-20kg.svg"></div>
+                <div class="cabin__item--image"><img src="images/icons/icon--carry-two.svg"></div>
                 <div class="cabin__item--text">
                   <p>2 carry on bags<span>with WIZZ Priority</span></p>
                   <ul>
@@ -169,7 +184,7 @@
                 <div class="cabin__item--button"><a href="javascript:void(0);">Add for</a></div>
               </div>
               <div class="cabin__item">
-                <div class="cabin__item--image"><img src="images/icons/icon--baggage-20kg.svg"></div>
+                <div class="cabin__item--image"><img src="images/icons/icon--carry-one.svg"></div>
                 <div class="cabin__item--text">
                   <p>1 carry on bag</p>
                   <ul>

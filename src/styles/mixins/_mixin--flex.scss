@@ -12,9 +12,20 @@
   align-items: center;
 }
 
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+}
+
 @mixin flex-equal {
   display: flex;
   justify-content: space-between;
+}
+
+@mixin flex-equal-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @mixin flex-self-equal {

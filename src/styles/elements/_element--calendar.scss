@@ -2,7 +2,7 @@
 
 .sidebar {
   .calendar {
-    display: inline-block;
+    float: left;
     border: 2px solid #e1e1e1;
     border-radius: $border-radius;
     background-color: $color-shade;

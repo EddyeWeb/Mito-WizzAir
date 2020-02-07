@@ -11,4 +11,10 @@
   padding: $rem15;
   width: 180px;
   cursor: pointer;
+  transition: $transition;
+
+  &:hover {
+    transition: $transition;
+    background-color: #b21479;
+  }
 }

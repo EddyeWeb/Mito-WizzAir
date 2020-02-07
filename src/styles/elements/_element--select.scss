@@ -42,3 +42,27 @@
     pointer-events: none;
   }
 }
+
+// Aside unique select
+
+.sidebar {
+  .select {
+    background: #3434E0;
+    width: 4.5em;
+
+    select {
+      background: #3434E0;
+      color: $color-white;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 0 $rem10;
+    }
+
+    &:after { // I just don't change the select icon....
+      content: url(../images/icons/icon--select.svg);
+      background: transparent;
+      padding: 0 $rem10;
+      filter: brightness(0) invert(1);
+    }
+  }
+}

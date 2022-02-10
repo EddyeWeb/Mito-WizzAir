@@ -28,7 +28,7 @@
     "reset-css": "^5.0.1"
   },
   "devDependencies": {
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "sass-lint": "^1.13.1"
   }
 }
